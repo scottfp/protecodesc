@@ -22,8 +22,8 @@ HTTP_TIMEOUT = 60  # seconds
 # From Appcheck API documentation
 # https://appcheck.codenomicon.com/help/appcheck-api/
 API_URL_MAP = {'upload': '{host}/api/upload/{filename}',
-               'result': '{host}/api/app/{id_or_sha1}/',
-               'rescan': '{host}/api/rescan/{id_or_sha1}/',
+               'result': '{host}/api/product/{id_or_sha1}/',
+               'rescan': '{host}/api/product/{id_or_sha1}/',
                'groups': '{host}/api/groups/',
                'apps': '{host}/api/apps/',
                'components': '{host}/api/components/{component}/',

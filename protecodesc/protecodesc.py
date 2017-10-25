@@ -167,6 +167,16 @@ class ProtecodeSC(object):
         self._raise_for_status(r)
         return r.json()
 
+    def list_apps(self, group=None):
+        """List all apps in a group
+
+        :param group: group ID number
+        """
+        uri = self._uri('apps-group', group=group) if group else self._uri('apps')
+        r = self._retry_request(self.session.get, [uri], {'auth': self.creds})
+        self._raise_for_status(r)
+        return r.json()
+
     def list_groups(self):
         """List groups"""
         uri = self._uri('groups')
